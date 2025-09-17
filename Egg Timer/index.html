@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Egg Timer</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="timer-container">
+		<h1>Egg Timer</h1>
+		<div class="inputs">
+			<button class="preset-btn" id="runnyBtn">Runny</button>
+			<button class="preset-btn" id="softBtn">Soft Boiled</button>
+			<button class="preset-btn" id="hardBtn">Hard Boiled</button>
+			<button class="preset-btn" id="customBtn">Custom</button>
+		</div>
+		<div class="buttons">
+			<button id="startBtn">Start</button>
+			<button id="pauseBtn" disabled>Pause</button>
+			<button id="resetBtn" disabled>Reset</button>
+		</div>
+	<!-- Timer display is now inside the progress ring below -->
+		<div class="progress-ring">
+			<svg width="300" height="300">
+				<circle class="progress-bg" cx="150" cy="150" r="135" stroke-width="25" fill="none" />
+				<circle class="progress-bar" cx="150" cy="150" r="135" stroke-width="25" fill="none" />
+			</svg>
+			<div class="display" id="timerDisplay">05:00</div>
+		</div>
+		<audio id="alarmSound" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" preload="auto"></audio>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
